@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class NewPost extends StatefulWidget {
-  const NewPost({super.key});
+class CreateNewPost extends StatefulWidget {
+  const CreateNewPost({super.key});
 
   @override
-  State<NewPost> createState() => NewPostState();
+  State<CreateNewPost> createState() => CresteNewPostState();
 }
 
-class NewPostState extends State<NewPost> {
+class CresteNewPostState extends State<CreateNewPost> {
 
   final postController = TextEditingController();
 
@@ -17,7 +17,16 @@ class NewPostState extends State<NewPost> {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(8),
-          child: ,
+          child: Row(
+            children: [
+              GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: Icon(Icons.arrow_back),
+              )
+            ],
+          ),
         ),
       ),
     );

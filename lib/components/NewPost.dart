@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../pages/CreateNewPost.dart';
+
 class NewPost extends StatefulWidget {
   const NewPost({super.key});
 
@@ -46,7 +48,7 @@ class NewPostState extends State<NewPost> {
                 padding: EdgeInsets.all(4),
                 child: GestureDetector(
                   onTap: () {
-
+                    Navigator.of(context).push(MaterialPageRoute(builder: ((context) => CreateNewPost())));
                   },
                   child: Container(
                     decoration: BoxDecoration(
